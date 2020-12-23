@@ -1,0 +1,34 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 55px;
+}
+
+h1{
+  color:burlywood;
+  text-align: center;
+}
+
+.card-header {
+    background-color: lightblue;
+    color:black;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+    background-color: #343A40;
+    border-top: 5px solid lightblue;
+}
+
+footer small {
+    line-height: 55px;
+    color: white;
+    font-size: 20px;
+}
