@@ -1,54 +1,23 @@
-<div class="container">
-    <div class="col-md-12">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="jumbo-title">Eat-Da-Burger</h1>
-            </div>
+<nav class="navbar bg-dark">
+    <img src="https://ih1.redbubble.net/image.1359473912.0834/pp,840x830-pad,1000x1000,f8f8f8.u3.jpg" height="100" class="d-inline-block align-top mx-auto" alt="burger">
+</nav>
+<br>
+<h1>Burger Paradise</h1>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            {{> uneaten-burger }}
+        </div>
+        <div class="col">
+            {{> burger-list }}
         </div>
     </div>
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="assets/images/burger.jpeg" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">Burger Menu</h4>
-                        <hr>
-                        <ul class="list-unstyled">
-                            {{#each burger}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}}
-                            {{/each}}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="assets/images/devouredburger.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">Devoured Burgers</h4>
-                        <hr>
-                        <ul class="list-unstyled">
-                            {{#each burger}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}}
-                            {{/each}}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="assets/images/customorder.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">Special Request</h4>
-                        <hr>
-                        <form>
-                            <div class="form-group">
-                                <h6>What kind of burger do you want?</h6>
-                                <input class="form-control" id="newBurgerName" type="text" placeholder="Default input">
-                                <br>
-                                <button type="button" class="btn btn-info" id="makeBurger">Take Order</button>
-                            </div>
-                        </form>
-                    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name" id="burgerName">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="button" id="addBurger">Add</button>
                 </div>
             </div>
         </div>
