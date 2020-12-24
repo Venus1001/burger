@@ -7,10 +7,15 @@ if (process.env.JAWSDB_URL) {
 } else {
     connection = mysql.createConnection({
         host: "192.168.1.156",
-        database: "burger_db",
         user: "username",
-        port: 3306,
         password: "password"
+    });
+
+    connection.connect((error)=>{
+        if(error){
+            console.log("Error connecting to DB " + error);
+            return;
+        }
     });
 }
 
